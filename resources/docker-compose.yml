@@ -6,7 +6,7 @@ volumes:
 services:
   mariadb:
     image: mariadb:latest
-    container_name: mariadb2
+    container_name: mariadb
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -17,7 +17,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin:latest
-    container_name: phpmyadmin2
+    container_name: phpmyadmin
     depends_on:
       - mariadb
     ports:
